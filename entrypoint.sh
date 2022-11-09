@@ -13,4 +13,4 @@ git config --global user.email "41898282+github-actions[bot]@users.noreply.githu
   exit 1
 }
 
-git push -f --all origin
+git push -f --all origin target/${GITHUB_REF_NAME}:${GITHUB_REF_NAME}

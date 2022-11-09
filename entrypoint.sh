@@ -7,7 +7,7 @@ git config --global user.name "github-actions[bot]"
 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
 {
-  git switch target/${GITHUB_REF_NAME}
+  git switch -c target/${GITHUB_REF_NAME}
 } || {
   echo $?
   exit 1

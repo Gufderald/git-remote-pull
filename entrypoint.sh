@@ -6,11 +6,13 @@ git fetch origin
 git config --global user.name "github-actions[bot]"
 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-{
-  git switch -c {GITHUB_REF_NAME} target/${GITHUB_REF_NAME}
-} || {
-  echo $?
-  exit 1
-}
+# {
+#   git switch -c ${GITHUB_REF_NAME} target/${GITHUB_REF_NAME}
+# } || {
+#   echo $?
+#   exit 1
+# }
+
+git pull target ${GITHUB_REF_NAME}
 
 git push origin ${GITHUB_REF_NAME}
